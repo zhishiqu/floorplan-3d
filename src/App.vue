@@ -14,7 +14,13 @@
     <div class="grp only2d" id="tools">
       <button class="btn on" data-tool="select" title="选择 / 移动 (V)" data-en-title="Select / Move (V)" data-en="Select">选择</button>
       <button class="btn" data-tool="measure" title="测量 (M)" data-en-title="Measure (M)" data-en="Measure">测量</button>
-      <button class="btn" data-tool="demolish" title="拆改非承重墙 (X)" data-en-title="Demolish non-bearing walls (X)" data-en="Demolish">拆改墙体</button>
+      <button class="btn" data-tool="demolish" title="拆改墙体 (X)" data-en-title="Demolish walls (X)" data-en="Demolish">拆改墙体</button>
+      <button class="btn" data-tool="draw" title="画墙 (W)" data-en-title="Draw wall (W)" data-en="Draw wall">画墙</button>
+    </div>
+    <div class="grp only2d" id="uwTypes" hidden>
+      <button class="btn chip on" data-uwt="n" title="内墙 240mm" data-en-title="Partition 240mm">内墙</button>
+      <button class="btn chip" data-uwt="e" title="外墙 240mm" data-en-title="Exterior wall 240mm">外墙</button>
+      <button class="btn chip" data-uwt="b" title="承重墙 240mm" data-en-title="Load-bearing wall 240mm">承重墙</button>
     </div>
     <div class="grp only2d">
       <button class="btn" id="zoomOut" title="缩小" data-en-title="Zoom out">−</button>
@@ -86,6 +92,7 @@
       <g id="gRooms"></g>
       <g id="gFurn"></g>
       <g id="gWalls"></g>
+      <g id="gDraw" pointer-events="none"></g>
       <g id="gOpen"></g>
       <g id="gLabels" pointer-events="none"></g>
       <g id="gDims" pointer-events="none"></g>
