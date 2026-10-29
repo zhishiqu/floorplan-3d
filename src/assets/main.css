@@ -50,6 +50,12 @@ main{position:relative;overflow:hidden;background:var(--paper)}
 #plan.tool-demolish .wall:hover{fill:#d9894f}
 #plan.tool-draw{cursor:crosshair}
 #uwTypes[hidden]{display:none}
+#opTypes[hidden]{display:none}
+#plan.tool-open{cursor:crosshair}
+/* 门窗洞口：默认不拦截指针（拆墙可穿透点到洞口后面的墙），选择工具下才可点选 */
+#gOpen{pointer-events:none}
+#plan.tool-select .op{pointer-events:all;cursor:pointer}
+@media (hover:hover){#plan.tool-select .op:hover{filter:drop-shadow(0 0 2px rgba(181,101,58,.8))}}
 #plan.tool-select .wall[data-wall^="u"]{pointer-events:all;cursor:move}
 @media (hover:hover){#plan.tool-select .wall[data-wall^="u"]:hover{filter:drop-shadow(0 0 2px rgba(181,101,58,.7))}}
 #plan.tool-select .room:hover{opacity:.82}

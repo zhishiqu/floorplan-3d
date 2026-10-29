@@ -16,11 +16,17 @@
       <button class="btn" data-tool="measure" title="测量 (M)" data-en-title="Measure (M)" data-en="Measure">测量</button>
       <button class="btn" data-tool="demolish" title="拆改墙体 (X)" data-en-title="Demolish walls (X)" data-en="Demolish">拆改墙体</button>
       <button class="btn" data-tool="draw" title="画墙 (W)" data-en-title="Draw wall (W)" data-en="Draw wall">画墙</button>
+      <button class="btn" data-tool="open" title="放门窗 (O)" data-en-title="Place door / window (O)" data-en="Door / window">放门窗</button>
     </div>
     <div class="grp only2d" id="uwTypes" hidden>
       <button class="btn chip on" data-uwt="n" title="内墙 240mm" data-en-title="Partition 240mm">内墙</button>
       <button class="btn chip" data-uwt="e" title="外墙 240mm" data-en-title="Exterior wall 240mm">外墙</button>
       <button class="btn chip" data-uwt="b" title="承重墙 240mm" data-en-title="Load-bearing wall 240mm">承重墙</button>
+    </div>
+    <div class="grp only2d" id="opTypes" hidden>
+      <button class="btn chip on" data-opt="win" title="窗 ≥400mm" data-en-title="Window ≥400mm">窗</button>
+      <button class="btn chip" data-opt="door" title="平开门 ≥600mm" data-en-title="Swing door ≥600mm">门</button>
+      <button class="btn chip" data-opt="slide" title="推拉门 ≥700mm" data-en-title="Sliding door ≥700mm">推拉门</button>
     </div>
     <div class="grp only2d">
       <button class="btn" id="zoomOut" title="缩小" data-en-title="Zoom out">−</button>
@@ -41,6 +47,7 @@
       <button class="btn" id="undo" title="撤销 (Ctrl+Z)" data-en-title="Undo (Ctrl+Z)" data-en="Undo">撤销</button>
       <button class="btn" id="redo" title="重做 (Ctrl+Shift+Z)" data-en-title="Redo (Ctrl+Shift+Z)" data-en="Redo">重做</button>
       <button class="btn danger" id="clearAll" title="清空所有家具家电（可撤销）" data-en-title="Remove all furniture and appliances (undoable)" data-en="Clear">清空布置</button>
+      <button class="btn danger" id="clearScene" title="清空整个场景：拆除全部墙体并删除所有门窗 / 家具 / 测量（可撤销）" data-en-title="Clear the whole scene: demolish all walls and delete all openings, furniture and measurements (undoable)" data-en="Clear all">清空场景</button>
     </div>
     <div class="grp only2d" id="layers">
       <button class="btn chip on" data-layer="dims" data-en="Dims">尺寸</button>
@@ -92,8 +99,8 @@
       <g id="gRooms"></g>
       <g id="gFurn"></g>
       <g id="gWalls"></g>
-      <g id="gDraw" pointer-events="none"></g>
       <g id="gOpen"></g>
+      <g id="gDraw" pointer-events="none"></g>
       <g id="gLabels" pointer-events="none"></g>
       <g id="gDims" pointer-events="none"></g>
       <g id="gMeasure" pointer-events="none"></g>
